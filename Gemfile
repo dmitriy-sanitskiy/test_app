@@ -11,8 +11,14 @@ end
 gem 'rails', '~> 5.0.1'
 
 # Use sqlite3 as the database for Active Record
-group :development do
+group :development, :test do
   gem 'sqlite3', '~> 1.3', '>= 1.3.12'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+end
+
+group :test do
+  gem 'selenium-webdriver', '~> 3.0', '>= 3.0.4'
+  gem 'capybara', '~> 2.11'
 end
 
 # Use Puma as the app server
@@ -64,4 +70,10 @@ end
 
 group :development do
   gem 'mysql2', '~> 0.4.5'
+end
+
+
+
+group :doc do
+  gem 'sdoc', '~> 0.4.2', require: false
 end
